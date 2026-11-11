@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { MainPage } from './main-page/main-page';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [MainPage],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-insta-course-0726');
+
 }
