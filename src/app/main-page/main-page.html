@@ -1,8 +1,19 @@
-<h1>Temu Insta</h1>
 @for (post of posts; track $index) {
 <article>
     <h2>{{ post.name }}</h2>
     <img [src]="post.img" [alt]="post.name + ' Image'">
     <p>{{ post.likes }} Likes</p>
+
+    <button type="button" (click)="toggleLike(post)">
+        @if (post.isLiked) {
+        <img src="images/heart-red.png">
+        } @else {
+        <img src="images/heart-black.png">
+        }
+    </button>
 </article>
 }
+
+<footer>
+    <a routerLink="/contact">Contact</a>
+</footer>
