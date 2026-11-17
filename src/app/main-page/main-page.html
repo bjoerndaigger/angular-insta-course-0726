@@ -1,19 +1,7 @@
 @for (post of posts; track $index) {
-<article>
-    <h2>{{ post.name }}</h2>
-    <img [src]="post.img" [alt]="post.name + ' Image'">
-    <p>{{ post.likes }} Likes</p>
-
-    <button type="button" (click)="toggleLike(post)">
-        @if (post.isLiked) {
-        <img src="images/heart-red.png">
-        } @else {
-        <img src="images/heart-black.png">
-        }
-    </button>
-</article>
+<app-single-post [postInput]="post"></app-single-post>
 }
 
-<footer>
+<p>
     <a routerLink="/contact">Contact</a>
-</footer>
+</p>
