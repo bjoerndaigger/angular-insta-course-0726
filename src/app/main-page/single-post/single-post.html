@@ -10,4 +10,8 @@
         <img src="images/heart-black.png">
         }
     </button>
+
+    <h3>Comments:</h3>
+    <input [formField]="commentInput" />
+    <button type="button" (click)="addComment()" [disabled]="!commentInput().value()">Send</button>
 </article>
